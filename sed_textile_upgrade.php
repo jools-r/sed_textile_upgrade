@@ -1,5 +1,4 @@
 <?php
-
 global $event;
 
 if( @txpinterface === 'admin' )
@@ -17,7 +16,7 @@ function sed_textile_upgrade_installed( $evt, $stp )
 <html>
 <head>
 	<title>WARNING: Site content at risk.</title>
-	<link href="theme/classic/textpattern.css" rel="stylesheet" type="text/css" />
+	<link href="admin-themes/hive/assets/css/textpattern.css" rel="stylesheet" type="text/css" />
 	<style type="text/css">
 		div { width:40em; margin:4em auto; padding:2em 2em 1em; border:0.1em solid #ccc; text-align:center }
 		ul { margin:0 0 2em; list-style:none }
@@ -77,16 +76,14 @@ if( @txpinterface === 'admin' && $event !== 'plugin' ) # Should only happen if p
 				", $debug );
 
 			if( !empty( $list ) ) {
-				include_once txpath.'/lib/classTextile.php';
-				$textile = new Textile();
+				$textile = new \Textpattern\Textile\Parser();
 				foreach( $list as $info ) {
 					if( 1 == $info['textile_body'] ) {
-						$set[] = "Body_html    = '" . doSlash( $textile->TextileThis( $info['Body']    ) ) . "'";
-						//$set[] = "Title_html   = '" . doSlash( $textile->TextileThis( $info['Title']   ) ) . "'";
+						$set[] = "Body_html    = '" . doSlash( $textile->parse( $info['Body']    ) ) . "'";
 					}
 
 					if( 1 == $info['textile_excerpt'] )
-						$set[] = "Excerpt_html = '" . doSlash( $textile->TextileThis( $info['Excerpt'] ) ) . "'";
+						$set[] = "Excerpt_html = '" . doSlash( $textile->parse( $info['Excerpt'] ) ) . "'";
 
 					$set = implode( ', ', $set );
 					$result = safe_update( 'textpattern', $set, "ID = {$info['ID']}", $debug );
@@ -109,7 +106,7 @@ if( @txpinterface === 'admin' && $event !== 'plugin' ) # Should only happen if p
 	safe_delete( 'txp_plugin', "`name`='sed_textile_upgrade'", $debug );
 	if( !$debug ) {
 		while( @ob_end_clean() );
-		header('Location: '.hu.'textpattern/index.php?event=list');
+		header('Location: '.ahu.'index.php?event=list');
 		header('Connection: close');
 		header('Content-Length: 0');
 	}
