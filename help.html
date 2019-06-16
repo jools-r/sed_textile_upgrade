@@ -1,0 +1,44 @@
+	<style type="text/css">
+	div#sed_textile_upgrade_help td { vertical-align:top; }
+	div#sed_textile_upgrade_help code { font-weight:bold; font: 105%/130% "Courier New", courier, monospace; background-color: #FFFFCC;}
+	div#sed_textile_upgrade_help code.sed_code_tag { font-weight:normal; border:1px dotted #999; background-color: #f0e68c; display:block; margin:10px 10px 20px; padding:10px; }
+	div#sed_textile_upgrade_help a:link, div#sed_textile_upgrade_help a:visited { color: blue; text-decoration: none; border-bottom: 1px solid blue; padding-bottom:1px;}
+	div#sed_textile_upgrade_help a:hover, div#sed_textile_upgrade_help a:active { color: blue; text-decoration: none; border-bottom: 2px solid blue; padding-bottom:1px;}
+	div#sed_textile_upgrade_help h1 { color: #369; font: 20px Georgia, sans-serif; margin: 0; text-align: center; }
+	div#sed_textile_upgrade_help h2 { border-bottom: 1px solid black; padding:10px 0 0; color: #369; font: 17px Georgia, sans-serif; }
+	div#sed_textile_upgrade_help h3 { color: #693; font: bold 12px Arial, sans-serif; letter-spacing: 1px; margin: 10px 0 0;text-transform: uppercase;}
+	div#sed_textile_upgrade_help ul ul { font-size:85%; }
+	div#sed_textile_upgrade_help h3 { color: #693; font: bold 12px Arial, sans-serif; letter-spacing: 1px; margin: 10px 0 0;text-transform: uppercase;}
+	</style>
+ <div id="sed_textile_upgrade_help">
+
+	<h1 id="top">sed_textile_upgrade.</h1>
+
+	<p>Batch converts all your site articles marked as textile encoded, then self-terminates. Note, it makes a backup of your textpattern table before it does the conversion.</p>
+
+	<p>To upgrade to a new version of textile&#8230;</p>
+
+	<ul>
+		<li>Overwrite your textpattern installation&#8217;s copy of classTextile.php with the new one.</li>
+		<li>Install the plugin.</li>
+		<li>Activate the plugin and navigate to any other tab.</li>
+		<li>Wait while your articles are converted.</li>
+	</ul>
+
+	<p>That&#8217;s it. You should now&#8230;</p>
+
+	<ul>
+		<li>find a new table, <strong>textpattern_pre_textile_upgrade</strong> which is a backup of your original <strong>textpattern</strong> table</li>
+		<li>have all your articles that were originally marked as using textile re-encoded using the latest version</li>
+		<li>no longer have this plugin installed.</li>
+	</ul>
+
+	<p>Post upgrade&#8230;</p>
+
+	<p>Please <strong>check all is well with your freshly updated articles.</strong> If not, please use phpmyadmin (or similar) to rename your textpattern table to something (don&#8217;t just drop it) and then rename textpattern_pre_texitle_update to <em>textpattern</em>.</p>
+
+	<p><strong>NB:</strong> You won&#8217;t be able to run the script again until you remove the table textpattern_pre_textile_upgrade.</p>
+
+ <span style="float:right"><a href="#top" title="Jump to the top">top</a></span>
+
+ </div>
