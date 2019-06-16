@@ -23,6 +23,11 @@ Please **check all is well with your freshly updated articles.** If not, please 
 
 **NB:** You won’t be able to run the script again until you remove the table textpattern_pre_textile_upgrade.
 
+## Credits
+
+This plugin was written by Steve ([Netcarver](https://github.com/netcarver)) and was originally available on [github](https://github.com/netcarver/sed_textile_upgrade) but has since been removed.
+
 ## Changelog
 
-- *v0.20* – update for Textpattern v4.7+ new textile parser.
+- *v0.2.0* – Update for Textpattern v4.7+ new textile parser.
+- *v0.1.3* – Last-known version from Netcarver ([forum thread](https://forum.textpattern.com/viewtopic.php?pid=256791#p256791)).
