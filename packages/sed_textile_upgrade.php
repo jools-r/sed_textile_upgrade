@@ -17,7 +17,7 @@
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 0;
 
-$plugin['version'] = '0.2';
+$plugin['version'] = '0.2.1';
 $plugin['author'] = 'Netcarver + jcr';
 $plugin['author_uri'] = 'https://github.com/jools-r/sed_textile_upgrade';
 $plugin['description'] = 'Facilitates textile upgrades to your Textpattern v4.7+ article body and excerpt texts';
@@ -55,7 +55,7 @@ if (!defined('txpinterface'))
 if (0) {
 ?>
 # --- BEGIN PLUGIN HELP ---
-	
+
 h1. sed_textile_upgrade
 
 *For Textpattern v4.7+ only*
