@@ -57,10 +57,10 @@ if( @txpinterface === 'admin' && $event !== 'plugin' ) # Should only happen if p
 	#
 	#		Backup the textpattern table (if possible)
 	#
-	$sql = "CREATE TABLE `textpattern_pre_textile_upgrade` LIKE `textpattern`;";
+    $sql = "CREATE TABLE ".safe_pfx('textpattern_pre_textile_upgrade')." LIKE ".safe_pfx('textpattern').";";
 	$result = safe_query( $sql, $debug );
 	if( $result ) {
-		$sql = "INSERT INTO `textpattern_pre_textile_upgrade` SELECT * FROM `textpattern`;";
+        $sql = "INSERT INTO ".safe_pfx('textpattern_pre_textile_upgrade')." SELECT * FROM ".safe_pfx('textpattern').";";
 		$result = safe_query( $sql, $debug );
 		if( $result ) {
 			#
