@@ -1,0 +1,64 @@
+# sed_textile_upgrade v0.2.1
+# Facilitates textile upgrades to your Textpattern v4.7+ article body and excerpt texts
+# Netcarver + jcr
+# https://github.com/jools-r/sed_textile_upgrade
+
+# ......................................................................
+# This is a plugin for Textpattern - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# ......................................................................
+
+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
