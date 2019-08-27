@@ -83,7 +83,9 @@ Please *check all is well with your freshly updated articles.* If not, please us
 
 h2. Changelog
 
-* *v0.20* – update for Textpattern v4.7+ new textile parser.
+* *v0.2.1* – Support for databases with table prefixes (as set in config.php). Thanks Kjeld.
+* *v0.2.0* – Update for Textpattern v4.7+ new textile parser.
+* *v0.1.3* – Last-known version from Netcarver ("forum thread":https://forum.textpattern.com/viewtopic.php?pid=256791#p256791).
 
 # --- END PLUGIN HELP ---
 <?php
